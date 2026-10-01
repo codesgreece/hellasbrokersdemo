@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #061b36;
+  --navy-dark: #031326;
+  --navy-mid: #0a2748;
+  --gold: #d6a936;
+  --gold-light: #f1d47a;
+  --warm-white: #f8f7f3;
+  --pure-white: #ffffff;
+  --dark-text: #111827;
+  --muted: #6b7280;
+  --muted-light: #9ca3af;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-mid: var(--navy-mid);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-warm-white: var(--warm-white);
+  --color-pure-white: var(--pure-white);
+  --color-dark-text: var(--dark-text);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--warm-white);
+  color: var(--dark-text);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 35%, transparent);
+  color: var(--navy-dark);
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold) 20%,
+    var(--gold-light) 50%,
+    var(--gold) 80%,
+    transparent
+  );
+}
+
+.navy-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(3, 19, 38, 0.88) 0%,
+    rgba(6, 27, 54, 0.78) 45%,
+    rgba(3, 19, 38, 0.9) 100%
+  );
+}
+
+.text-balance {
+  text-wrap: balance;
+}
